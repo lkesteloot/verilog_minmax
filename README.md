@@ -6,39 +6,23 @@ command line.
 
 # Examples
 
-    % python minmax.py "<" "1'b0" vertex_0_x vertex_1_x vertex_2_x
-    result <= 1'b0 < vertex_0_x
-        ? 1'b0 < vertex_1_x
-            ? 1'b0 < vertex_2_x
-                ? 1'b0
-                : vertex_2_x
-            : vertex_1_x < vertex_2_x
-                ? vertex_1_x
-                : vertex_2_x
-        : vertex_0_x < vertex_1_x
-            ? vertex_0_x < vertex_2_x
-                ? vertex_0_x
-                : vertex_2_x
-            : vertex_1_x < vertex_2_x
-                ? vertex_1_x
-                : vertex_2_x;
+    % python minmax.py "<" vertex_0_x vertex_1_x vertex_2_x
+    result <= vertex_0_x < vertex_1_x
+        ? vertex_0_x < vertex_2_x
+            ? vertex_0_x
+            : vertex_2_x
+        : vertex_1_x < vertex_2_x
+            ? vertex_1_x
+            : vertex_2_x;
 
-    % python minmax.py ">" "WIDTH - 1" vertex_0_x vertex_1_x vertex_2_x
-    result <= WIDTH - 1 > vertex_0_x
-        ? WIDTH - 1 > vertex_1_x
-            ? WIDTH - 1 > vertex_2_x
-                ? WIDTH - 1
-                : vertex_2_x
-            : vertex_1_x > vertex_2_x
-                ? vertex_1_x
-                : vertex_2_x
-        : vertex_0_x > vertex_1_x
-            ? vertex_0_x > vertex_2_x
-                ? vertex_0_x
-                : vertex_2_x
-            : vertex_1_x > vertex_2_x
-                ? vertex_1_x
-                : vertex_2_x;
+    % python minmax.py ">" vertex_0_x vertex_1_x vertex_2_x
+    result <= vertex_0_x > vertex_1_x
+        ? vertex_0_x > vertex_2_x
+            ? vertex_0_x
+            : vertex_2_x
+        : vertex_1_x > vertex_2_x
+            ? vertex_1_x
+            : vertex_2_x;
 
 # License 
 

@@ -17,10 +17,10 @@
 # Generates Verilog code to compute the min or max of a set of registers or
 # constants. Specify the operator and all the operands on the command line.
 #
-# Example:
+# Examples:
 #
-#     python minmax.py "<" "1'b0" vertex_0_x vertex_1_x vertex_2_x
-#     python minmax.py ">" "WIDTH - 1" vertex_0_x vertex_1_x vertex_2_x
+#     python minmax.py "<" vertex_0_x vertex_1_x vertex_2_x
+#     python minmax.py ">" vertex_0_x vertex_1_x vertex_2_x
 #
 
 import sys
